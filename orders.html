@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>订单管理 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen" data-nav="订单管理" data-tab="orders">
+    <div class="app">
+      <div class="scroll" style="padding-bottom:56px">
+        <div class="px py" style="background:#fff">
+          <div class="search-bar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            搜索订单号 / 平台单号 / SKU
+          </div>
+        </div>
+        <div class="tabs">
+          <div class="tab active" data-filter="all">全部</div>
+          <div class="tab" data-filter="待推单">待推单</div>
+          <div class="tab" data-filter="工厂打回">工厂打回</div>
+          <div class="tab" data-filter="待接单">待接单</div>
+          <div class="tab" data-filter="生产中">生产中</div>
+          <div class="tab" data-filter="已打标">已打标</div>
+          <div class="tab" data-filter="已发货">已发货</div>
+        </div>
+
+        <div class="px py space-y-2" id="order-list">
+          <div class="card p-3 order-item" data-status="待推单">
+            <div class="flex gap-2">
+              <div class="check on mt-1"><svg width="10" height="10" viewBox="0 0 12 12"><path d="M2 6l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold">POD-20260818001</span>
+                  <span class="td-tag td-tag-warning">待推单</span>
+                </div>
+                <div class="mt-2 flex gap-2">
+                  <img class="thumb" src="assets/img/tee.jpg" alt="定制T恤">
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[14px] truncate">定制T恤 · 黑色 L</div>
+                    <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">亚马逊 · SKU TS-BLK-L · ×2</div>
+                    <div class="flex items-center justify-between mt-1">
+                      <span class="text-[11px]" style="color:var(--td-text-3)">08-18 09:32</span>
+                      <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥128.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 order-item" data-status="待推单">
+            <div class="flex gap-2">
+              <div class="check on mt-1"><svg width="10" height="10" viewBox="0 0 12 12"><path d="M2 6l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold">POD-20260818002</span>
+                  <span class="td-tag td-tag-warning">待推单</span>
+                </div>
+                <div class="mt-2 flex gap-2">
+                  <img class="thumb" src="assets/img/mug.jpg" alt="马克杯">
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[14px] truncate">马克杯定制 · 白杯 11oz</div>
+                    <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">Temu · SKU MG-WHT-11 · ×1</div>
+                    <div class="flex items-center justify-between mt-1">
+                      <span class="text-[11px]" style="color:var(--td-text-3)">08-18 09:48</span>
+                      <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥86.50</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 order-item" data-status="工厂打回">
+            <div class="flex gap-2">
+              <div class="check mt-1"></div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold">POD-20260816008</span>
+                  <span class="td-tag td-tag-error">工厂打回</span>
+                </div>
+                <div class="mt-2 flex gap-2">
+                  <img class="thumb" src="assets/img/pillow.jpg" alt="抱枕">
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[14px] truncate">抱枕定制 · 45×45</div>
+                    <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">Temu · 工厂打回：内芯缺货</div>
+                    <div class="flex items-center justify-between mt-1">
+                      <span class="text-[11px]" style="color:var(--td-text-3)">08-16 14:22</span>
+                      <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥188.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 order-item" data-status="待接单">
+            <div class="flex gap-2">
+              <div class="check mt-1"></div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold">POD-20260818003</span>
+                  <span class="td-tag td-tag-brand">待接单</span>
+                </div>
+                <div class="mt-2 flex gap-2">
+                  <img class="thumb" src="assets/img/case.jpg" alt="手机壳">
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[14px] truncate">手机壳 · iPhone 15 Pro</div>
+                    <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">TikTok · SKU CS-15P-CLR · ×3</div>
+                    <div class="flex items-center justify-between mt-1">
+                      <span class="text-[11px]" style="color:var(--td-text-3)">08-18 10:05</span>
+                      <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥215.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 order-item" data-status="生产中">
+            <div class="flex gap-2">
+              <div class="check mt-1"></div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold">POD-20260817015</span>
+                  <span class="td-tag td-tag-brand">生产中</span>
+                </div>
+                <div class="mt-2 flex gap-2">
+                  <img class="thumb" src="assets/img/tote.jpg" alt="帆布袋">
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[14px] truncate">帆布袋定制 · 本色</div>
+                    <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">亚马逊 · SKU TB-NAT-01 · ×1</div>
+                    <div class="flex items-center justify-between mt-1">
+                      <span class="text-[11px]" style="color:var(--td-text-3)">08-17 18:02</span>
+                      <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥96.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 order-item" data-status="已打标">
+            <div class="flex gap-2">
+              <div class="check mt-1"></div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold">POD-20260815022</span>
+                  <span class="td-tag td-tag-default">已打标</span>
+                </div>
+                <div class="mt-2 flex gap-2">
+                  <img class="thumb" src="assets/img/tee.jpg" alt="卫衣">
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[14px] truncate">卫衣定制 · 灰色 XL</div>
+                    <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">Temu · SKU HD-GRY-XL · ×1</div>
+                    <div class="flex items-center justify-between mt-1">
+                      <span class="text-[11px]" style="color:var(--td-text-3)">08-15 16:40</span>
+                      <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥156.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 order-item" data-status="已发货">
+            <div class="flex gap-2">
+              <div class="check mt-1"></div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] font-semibold">POD-20260814009</span>
+                  <span class="td-tag td-tag-success">已发货</span>
+                </div>
+                <div class="mt-2 flex gap-2">
+                  <img class="thumb" src="assets/img/mug.jpg" alt="马克杯">
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[14px] truncate">马克杯 · 黑色 15oz</div>
+                    <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">亚马逊 · 物流 YT60814009</div>
+                    <div class="flex items-center justify-between mt-1">
+                      <span class="text-[11px]" style="color:var(--td-text-3)">08-14 11:08</span>
+                      <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥72.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:0;right:0;bottom:70px;background:#fff;border-top:0.5px solid var(--td-gray-3);padding:8px 16px;display:flex;align-items:center;gap:10px;z-index:12">
+        <div class="check on"><svg width="10" height="10" viewBox="0 0 12 12"><path d="M2 6l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="text-[13px]" style="color:var(--td-text-2)">全选 · <span style="color:var(--td-brand);font-weight:600">已选 2</span></div>
+        <div class="ml-auto">
+          <button class="btn btn-primary" style="height:36px;padding:0 16px">付款推单 ¥214.50</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+<script>
+  document.querySelectorAll(".tabs .tab").forEach(function (el) {
+    el.addEventListener("click", function () {
+      document.querySelectorAll(".tabs .tab").forEach(function (t) { t.classList.remove("active"); });
+      el.classList.add("active");
+      var filter = el.getAttribute("data-filter");
+      document.querySelectorAll(".order-item").forEach(function (card) {
+        card.style.display = (filter === "all" || card.getAttribute("data-status") === filter) ? "" : "none";
+      });
+    });
+  });
+  document.querySelectorAll(".check").forEach(function (el) {
+    el.addEventListener("click", function () {
+      el.classList.toggle("on");
+      if (el.classList.contains("on") && !el.querySelector("svg")) {
+        el.innerHTML = '<svg width="10" height="10" viewBox="0 0 12 12"><path d="M2 6l3 3 5-6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      } else if (!el.classList.contains("on")) {
+        el.innerHTML = "";
+      }
+    });
+  });
+</script>
+</body>
+</html>

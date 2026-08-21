@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>订单详情 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen" data-nav="订单详情" data-back="true">
+    <div class="app">
+      <div class="scroll" style="padding-bottom:12px">
+        <div class="card mx-4 mt-3 p-4" style="margin:12px 16px 0">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-[13px]" style="color:var(--td-text-3)">系统订单号</div>
+              <div class="text-[16px] font-semibold mt-0.5">POD-20260818001</div>
+            </div>
+            <span class="td-tag td-tag-warning">待推单</span>
+          </div>
+        </div>
+
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">基础信息</div>
+        <div class="card" style="margin:0 16px">
+          <div class="cell"><span style="color:var(--td-text-2)">平台订单号</span><span class="cell-note" style="color:var(--td-text-1)">AMZ-88291044</span></div>
+          <div class="cell"><span style="color:var(--td-text-2)">来源平台</span><span class="cell-note" style="color:var(--td-text-1)">亚马逊</span></div>
+          <div class="cell"><span style="color:var(--td-text-2)">创建时间</span><span class="cell-note" style="color:var(--td-text-1)">2026-08-18 09:32</span></div>
+        </div>
+
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">商品明细</div>
+        <div class="card p-3" style="margin:0 16px">
+          <div class="flex gap-3">
+            <img class="thumb" src="assets/img/tee.jpg" alt="">
+            <div class="flex-1">
+              <div class="text-[14px] font-medium">定制T恤 - 黑色 L</div>
+              <div class="text-[12px] mt-1" style="color:var(--td-text-3)">本地 SKU TS-BLK-L · 平台 SKU AMZ-TS-01</div>
+              <div class="flex justify-between mt-2 text-[13px]">
+                <span style="color:var(--td-text-2)">×2</span>
+                <span class="price font-semibold">¥64.00 × 2 = ¥128.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">生产物流</div>
+        <div class="card" style="margin:0 16px">
+          <div class="cell"><span style="color:var(--td-text-2)">生产状态</span><span class="cell-note">待推单</span></div>
+          <div class="cell"><span style="color:var(--td-text-2)">物流单号</span><span class="cell-note">—</span></div>
+        </div>
+
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">操作记录</div>
+        <div class="card mb-4" style="margin:0 16px 16px">
+          <div class="cell"><span style="color:var(--td-text-2)">创建时间</span><span class="cell-note" style="color:var(--td-text-1)">08-18 09:32</span></div>
+          <div class="cell"><span style="color:var(--td-text-2)">付款推单</span><span class="cell-note">未执行</span></div>
+        </div>
+      </div>
+      <div style="padding:8px 16px 28px;background:#fff;border-top:0.5px solid var(--td-gray-3)">
+        <button class="btn btn-primary btn-block" style="height:44px">付款推单 ¥128.00</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>选择登录方式 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen">
+    <div class="app" style="background:#fff">
+      <div class="scroll px" style="display:flex;flex-direction:column">
+        <div style="height:72px"></div>
+        <div class="flex flex-col items-center">
+          <img src="assets/img/yituo-logo.png" alt="忆托" width="72" height="72" style="border-radius:16px">
+          <div class="mt-4 text-[22px] font-semibold tracking-wide">忆托 OMS</div>
+          <div class="mt-1 text-[13px]" style="color:var(--td-text-3)">卖家端移动订单管理</div>
+        </div>
+        <div class="mt-8 text-[13px] font-medium" style="color:var(--td-text-2)">请选择登录方式</div>
+
+        <a href="bind-account.html" class="card mt-3 p-4" style="display:block;text-decoration:none;color:inherit;border:0.5px solid var(--td-gray-3)">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-td-lg flex items-center justify-center flex-shrink-0" style="background:#e8f8ee;color:#07c160">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8.5 10.5c.4 0 .7-.4.7-.8s-.3-.8-.7-.8-.8.4-.8.8.4.8.8.8zm7 0c.4 0 .8-.4.8-.8s-.4-.8-.8-.8-.7.4-.7.8.3.8.7.8z" fill="currentColor"/><path d="M12.2 4.5C7.5 4.5 3.8 7.7 3.8 11.6c0 2.2 1.2 4.2 3.1 5.5l-.5 2.4 2.5-1.4c.9.3 1.9.4 2.9.4h.2c4.6 0 8.4-3.2 8.4-7.1 0-3.9-3.8-6.9-8.2-6.9z" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-[16px] font-semibold">微信一键登录</div>
+              <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">授权后关联 ERP 卖家账号</div>
+            </div>
+            <span class="cell-arrow">›</span>
+          </div>
+        </a>
+
+        <a href="password-login.html" class="card mt-3 p-4" style="display:block;text-decoration:none;color:inherit;border:0.5px solid var(--td-gray-3)">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-td-lg flex items-center justify-center flex-shrink-0" style="background:var(--td-brand-color-1);color:var(--td-brand)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V8a4 4 0 018 0v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-[16px] font-semibold">账号密码登录</div>
+              <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">使用 Web 端卖家账号直接进入</div>
+            </div>
+            <span class="cell-arrow">›</span>
+          </div>
+        </a>
+
+        <div style="flex:1"></div>
+        <div class="text-center text-[11px] mb-6" style="color:var(--td-text-4)">登录即表示同意《用户协议》与《隐私政策》</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>

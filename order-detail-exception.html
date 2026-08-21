@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>工厂打回 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen" data-nav="订单详情" data-back="true">
+    <div class="app">
+      <div class="scroll">
+        <div class="card p-4" style="margin:12px 16px 0">
+          <div class="flex items-center justify-between">
+            <div class="text-[16px] font-semibold">POD-20260816008</div>
+            <span class="td-tag td-tag-error">工厂打回</span>
+          </div>
+        </div>
+        <div class="mx-4 mt-3 p-3 rounded-td-xl text-[13px] leading-6" style="margin:12px 16px 0;background:var(--td-error-1);color:var(--td-error)">
+          工厂打回：抱枕内芯 SKU PL-45 缺货，预计 08-25 补货。可修改后重新推单，或取消订单。
+        </div>
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">商品明细</div>
+        <div class="card p-3" style="margin:0 16px">
+          <div class="flex gap-3">
+            <img class="thumb" src="assets/img/pillow.jpg" alt="">
+            <div class="flex-1">
+              <div class="text-[14px]">抱枕定制 · 45×45</div>
+              <div class="text-[12px] mt-1" style="color:var(--td-text-3)">Temu · SKU PL-45 · ×1</div>
+              <div class="price font-semibold mt-2">¥188.00</div>
+            </div>
+          </div>
+        </div>
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">操作记录</div>
+        <div class="card" style="margin:0 16px 16px">
+          <div class="cell"><span style="color:var(--td-text-2)">付款时间</span><span class="cell-note" style="color:var(--td-text-1)">08-16 14:40</span></div>
+          <div class="cell"><span style="color:var(--td-text-2)">推单时间</span><span class="cell-note" style="color:var(--td-text-1)">08-16 14:41</span></div>
+          <div class="cell"><span style="color:var(--td-text-2)">打回时间</span><span class="cell-note" style="color:var(--td-text-1)">08-17 11:06</span></div>
+        </div>
+      </div>
+      <div class="flex gap-3" style="padding:8px 16px 28px;background:#fff;border-top:0.5px solid var(--td-gray-3)">
+        <button class="btn btn-outline flex-1">联系客服</button>
+        <button class="btn btn-primary flex-1">查看打回原因</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>付款推单确认 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen" data-nav="订单管理" data-tab="orders">
+    <div class="app">
+      <div class="scroll" style="filter:blur(1px);pointer-events:none">
+        <div class="px py" style="background:#fff"><div class="search-bar">搜索订单号 / SKU</div></div>
+        <div class="tabs"><div class="tab active">全部</div><div class="tab">待推单</div><div class="tab">工厂打回</div><div class="tab">待接单</div><div class="tab">生产中</div><div class="tab">已打标</div><div class="tab">已发货</div></div>
+        <div class="px py"><div class="card h-24"></div></div>
+      </div>
+      <div class="mask">
+        <div class="dialog">
+          <div class="text-center text-[16px] font-semibold mb-4">确认付款推单</div>
+          <div class="flex justify-between py-2 text-[14px]"><span style="color:var(--td-text-2)">已选订单</span><span>2 笔</span></div>
+          <div class="flex justify-between py-2 text-[14px]"><span style="color:var(--td-text-2)">合计金额</span><span class="price font-semibold" style="color:var(--td-error)">¥214.50</span></div>
+          <div class="flex justify-between py-2 text-[14px]"><span style="color:var(--td-text-2)">当前余额</span><span class="price">¥320.00</span></div>
+          <div class="flex justify-between py-2 text-[14px]"><span style="color:var(--td-text-2)">完成后余额</span><span class="price" style="color:var(--td-success)">¥105.50</span></div>
+          <div class="mt-2 text-[12px]" style="color:var(--td-text-3)">将先扣款再推送工厂，全部成功或全部回滚。仅「待推单」订单可操作。</div>
+          <div class="flex gap-3 mt-5">
+            <button class="btn btn-outline flex-1">取消</button>
+            <button class="btn btn-primary flex-1">确认付款推单</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>

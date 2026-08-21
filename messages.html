@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>消息中心 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen" data-nav="消息中心" data-tab="messages" data-nav-right="全部已读">
+    <div class="app">
+      <div class="scroll">
+        <div class="tabs">
+          <div class="tab active">全部</div>
+          <div class="tab">充值</div>
+          <div class="tab">订单</div>
+          <div class="tab">系统</div>
+        </div>
+
+        <div class="card" style="margin:8px 16px;border-radius:12px">
+          <div class="cell">
+            <div class="w-10 h-10 rounded-td flex items-center justify-center text-[16px]" style="background:var(--td-success-1)">¥</div>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between">
+                <span class="text-[15px] font-medium">充值到账通知</span>
+                <span class="text-[11px]" style="color:var(--td-text-3)">10:32</span>
+              </div>
+              <div class="text-[12px] mt-0.5 truncate" style="color:var(--td-text-3)">申请已审批通过，¥5,000.00 已入账</div>
+            </div>
+            <span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--td-error)"></span>
+          </div>
+          <div class="cell">
+            <div class="w-10 h-10 rounded-td flex items-center justify-center" style="background:var(--td-warning-1);color:var(--td-warning)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 8v5M12 16.5h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3.5l9 16H3l9-16z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between">
+                <span class="text-[15px] font-medium">余额预警</span>
+                <span class="text-[11px]" style="color:var(--td-text-3)">09:15</span>
+              </div>
+              <div class="text-[12px] mt-0.5 truncate" style="color:var(--td-text-3)">当前余额 ¥320，低于预警阈值 ¥500</div>
+            </div>
+            <span class="w-2 h-2 rounded-full" style="background:var(--td-error)"></span>
+          </div>
+          <div class="cell">
+            <div class="w-10 h-10 rounded-td flex items-center justify-center" style="background:var(--td-error-1);color:var(--td-error)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="5" y="3.5" width="14" height="17" rx="2" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between">
+                <span class="text-[15px] font-medium">工厂打回</span>
+                <span class="text-[11px]" style="color:var(--td-text-3)">昨天</span>
+              </div>
+              <div class="text-[12px] mt-0.5 truncate" style="color:var(--td-text-3)">POD-20260816008 工厂打回：内芯缺货</div>
+            </div>
+            <span class="w-2 h-2 rounded-full" style="background:var(--td-error)"></span>
+          </div>
+          <div class="cell">
+            <div class="w-10 h-10 rounded-td flex items-center justify-center" style="background:var(--td-brand-color-1);color:var(--td-brand)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between">
+                <span class="text-[15px] font-medium">推单成功</span>
+                <span class="text-[11px]" style="color:var(--td-text-3)">昨天</span>
+              </div>
+              <div class="text-[12px] mt-0.5 truncate" style="color:var(--td-text-3)">12 笔订单已成功推送至工厂</div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="w-10 h-10 rounded-td flex items-center justify-center" style="background:var(--td-gray-1);color:var(--td-text-2)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between">
+                <span class="text-[15px] font-medium">系统维护通知</span>
+                <span class="text-[11px]" style="color:var(--td-text-3)">昨天</span>
+              </div>
+              <div class="text-[12px] mt-0.5 truncate" style="color:var(--td-text-3)">08-19 凌晨 02:00–04:00 维护升级</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+<script>
+  document.querySelectorAll(".tabs .tab").forEach(function (el) {
+    el.addEventListener("click", function () {
+      document.querySelectorAll(".tabs .tab").forEach(function (t) { t.classList.remove("active"); });
+      el.classList.add("active");
+    });
+  });
+</script>
+</body>
+</html>

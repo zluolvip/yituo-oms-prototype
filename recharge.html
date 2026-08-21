@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>线下充值 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen" data-nav="线下充值" data-back="true" data-nav-right="记录">
+    <div class="app">
+      <div class="scroll" style="padding-bottom:12px">
+        <div class="px py">
+          <div class="card p-4">
+            <div class="text-[12px]" style="color:var(--td-text-3)">当前余额</div>
+            <div class="price text-[28px] font-semibold mt-1">¥320.00</div>
+            <div class="mt-2 text-[12px]" style="color:var(--td-warning)">余额低于预警阈值 ¥500，建议充值</div>
+          </div>
+        </div>
+
+        <div class="px mb-1 text-[13px] font-semibold">收款账户信息</div>
+        <div class="card" style="margin:0 16px">
+          <div class="cell"><span style="color:var(--td-text-2)">开户银行</span><span class="cell-note" style="color:var(--td-text-1)">中国工商银行</span></div>
+          <div class="cell"><span style="color:var(--td-text-2)">账户名称</span><span class="cell-note" style="color:var(--td-text-1)">上海翊数网络科技</span></div>
+          <div class="cell">
+            <span style="color:var(--td-text-2)">银行账号</span>
+            <span class="cell-note" style="color:var(--td-brand)">6222 **** **** 1234 复制</span>
+          </div>
+        </div>
+
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">充值金额 <span style="color:var(--td-error)">*</span></div>
+        <div class="card p-3" style="margin:0 16px">
+          <div class="flex items-center text-[22px] font-semibold">
+            <span class="mr-2">¥</span>
+            <span class="price">5,000</span>
+          </div>
+          <div class="flex gap-2 mt-3" id="amount-chips">
+            <span class="td-tag td-tag-default amount-chip" style="height:28px;padding:0 10px;line-height:28px;cursor:pointer">¥1000</span>
+            <span class="td-tag td-tag-brand amount-chip" style="height:28px;padding:0 10px;line-height:28px;cursor:pointer">¥5000</span>
+            <span class="td-tag td-tag-default amount-chip" style="height:28px;padding:0 10px;line-height:28px;cursor:pointer">¥10000</span>
+            <span class="td-tag td-tag-default amount-chip" style="height:28px;padding:0 10px;line-height:28px;cursor:pointer">¥50000</span>
+          </div>
+        </div>
+
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">付款方式 <span style="color:var(--td-error)">*</span></div>
+        <div class="px flex gap-2">
+          <span class="td-tag td-tag-brand" style="height:28px;padding:0 12px;line-height:28px">银行转账</span>
+          <span class="td-tag td-tag-default" style="height:28px;padding:0 12px;line-height:28px">支付宝</span>
+          <span class="td-tag td-tag-default" style="height:28px;padding:0 12px;line-height:28px">微信转账</span>
+        </div>
+
+        <div class="px mt-3 mb-1 text-[13px] font-semibold">付款截图 <span style="color:var(--td-error)">*</span></div>
+        <div class="px mb-3">
+          <div class="card p-4 flex items-center gap-3" style="border:1px dashed var(--td-gray-4)">
+            <div class="w-16 h-16 rounded-td overflow-hidden" style="background:var(--td-gray-1)"></div>
+            <div class="w-16 h-16 rounded-td flex flex-col items-center justify-center text-[11px]" style="border:1px dashed var(--td-gray-4);color:var(--td-text-3)">
+              <span class="text-[18px] leading-none">+</span>上传
+            </div>
+            <div class="text-[11px]" style="color:var(--td-text-3)">至少 1 张，最多 3 张<br>JPG / PNG / HEIC</div>
+          </div>
+        </div>
+
+        <div class="px mb-1 text-[13px] font-semibold">备注（选填）</div>
+        <div class="card p-3 mb-4 text-[14px]" style="margin:0 16px 16px;color:var(--td-text-3)">对公转账，附言：张卖家</div>
+      </div>
+      <div style="padding:8px 16px 28px;background:#fff;border-top:0.5px solid var(--td-gray-3)">
+        <button class="btn btn-primary btn-block" style="height:44px">提交申请</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+<script>
+  document.querySelectorAll(".amount-chip").forEach(function (el) {
+    el.addEventListener("click", function () {
+      document.querySelectorAll(".amount-chip").forEach(function (c) {
+        c.classList.remove("td-tag-brand");
+        c.classList.add("td-tag-default");
+      });
+      el.classList.remove("td-tag-default");
+      el.classList.add("td-tag-brand");
+      document.querySelector(".price").textContent = el.textContent.replace("¥", "") + (el.textContent.indexOf("000") > -1 && el.textContent.length < 6 ? "" : "");
+      var n = el.textContent.replace("¥", "");
+      document.querySelector(".price").textContent = Number(n).toLocaleString("zh-CN");
+    });
+  });
+</script>
+</body>
+</html>

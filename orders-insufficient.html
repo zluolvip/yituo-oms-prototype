@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>余额不足 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen" data-nav="订单管理" data-tab="orders">
+    <div class="app">
+      <div class="scroll" style="filter:blur(1px)"></div>
+      <div class="mask" style="align-items:center">
+        <div class="dialog dialog-center">
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center" style="background:var(--td-warning-1);color:var(--td-warning)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8v5M12 16.5h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3.5l9 16H3l9-16z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="text-[16px] font-semibold">余额不足</div>
+            <div class="mt-2 text-[13px] leading-6" style="color:var(--td-text-2)">当前余额 ¥320.00，需付款 ¥1,280.00。<br>请先提交线下充值申请。</div>
+          </div>
+          <div class="flex gap-3 mt-5">
+            <button class="btn btn-outline flex-1">取消</button>
+            <button class="btn btn-primary flex-1">去充值</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>

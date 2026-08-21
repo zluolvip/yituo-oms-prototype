@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=417">
+<title>充值记录 · 忆托 OMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/td-config.js"></script>
+<link rel="stylesheet" href="assets/common.css">
+</head>
+<body>
+<div class="phone-wrap">
+  <div class="phone-screen" data-nav="充值记录" data-back="true">
+    <div class="app">
+      <div class="scroll px py space-y-2">
+        <div class="card p-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[13px] font-semibold">RC20260818001</span>
+            <span class="td-tag td-tag-success">已通过</span>
+          </div>
+          <div class="price text-[20px] font-semibold mt-2">¥5,000.00</div>
+          <div class="text-[12px] mt-1" style="color:var(--td-text-3)">银行转账 · 申请 08-18 09:00 · 到账 08-18 10:30</div>
+        </div>
+        <div class="card p-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[13px] font-semibold">RC20260817003</span>
+            <span class="td-tag td-tag-warning">待审批</span>
+          </div>
+          <div class="price text-[20px] font-semibold mt-2">¥3,000.00</div>
+          <div class="text-[12px] mt-1" style="color:var(--td-text-3)">支付宝 · 申请 08-17 16:20 · 审批中不可撤回</div>
+        </div>
+        <div class="card p-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[13px] font-semibold">RC20260816002</span>
+            <span class="td-tag td-tag-error">已拒绝</span>
+          </div>
+          <div class="price text-[20px] font-semibold mt-2">¥2,000.00</div>
+          <div class="text-[12px] mt-1" style="color:var(--td-error)">拒绝原因：截图模糊，请重新提交</div>
+          <button class="btn btn-outline mt-3" style="height:32px;font-size:13px">修改后重新申请</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>
