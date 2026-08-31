@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="mx-4 mt-3 p-3 rounded-td-xl text-[13px] leading-6" style="margin:12px 16px 0;background:var(--td-error-1);color:var(--td-error)">
-          工厂打回：抱枕内芯 SKU PL-45 缺货，预计 08-25 补货。可修改后重新推单，或取消订单。
+          工厂打回：抱枕内芯 SKU PL-45 缺货，预计 08-25 补货。可修改图号或生产属性后重新推单。
         </div>
         <div class="px mt-3 mb-1 text-[13px] font-semibold">商品明细</div>
         <div class="card p-3" style="margin:0 16px">
@@ -29,10 +29,73 @@
             <div class="flex-1">
               <div class="text-[14px]">抱枕定制 · 45×45</div>
               <div class="text-[12px] mt-1" style="color:var(--td-text-3)">Temu · SKU PL-45 · ×1</div>
+              <div class="text-[12px] mt-1" style="color:var(--td-text-3)">发货仓库 深圳仓</div>
               <div class="price font-semibold mt-2">¥188.00</div>
             </div>
           </div>
         </div>
+
+        <div class="px mt-3 mb-1 flex items-center justify-between">
+          <span class="text-[13px] font-semibold">可改信息</span>
+          <div class="flex items-center gap-2">
+            <span class="text-[11px]" style="color:var(--td-text-3)">仅图号与生产属性可修改</span>
+            <button type="button" class="btn-text" data-edit-toggle>编辑</button>
+          </div>
+        </div>
+        <div class="card p-3" style="margin:0 16px" data-edit-section>
+          <div data-readonly-view>
+            <div class="field-label">图号</div>
+            <div class="field-readonly price mt-1.5" data-drawing-text>1920654414618</div>
+            <div class="field-label mt-3">生产属性</div>
+            <div class="mt-1.5 space-y-2" data-attr-readonly>
+              <div class="attr-readonly-row"><span class="attr-readonly-name">颜色属性</span>：米色</div>
+              <div class="attr-readonly-row"><span class="attr-readonly-name">材质/版型</span>：毛绒-抱枕</div>
+              <div class="attr-readonly-row"><span class="attr-readonly-name">版型</span>：45×45</div>
+            </div>
+          </div>
+          <div data-edit-view hidden>
+            <div class="field-label">图号</div>
+            <input class="field-input price mt-1.5" type="text" value="1920654414618" placeholder="请输入图号" data-drawing-input>
+            <div class="field-label mt-3">生产属性</div>
+            <div class="mt-1.5 space-y-2" id="attr-list">
+              <div class="attr-row">
+                <div class="field-select name" role="button" data-role="name" data-value="颜色属性">
+                  <span class="val">颜色属性</span>
+                  <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5 9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="field-select value" role="button" data-role="value" data-value="米色">
+                  <span class="val">米色</span>
+                  <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5 9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <button type="button" class="attr-del" aria-label="删除属性">×</button>
+              </div>
+              <div class="attr-row">
+                <div class="field-select name" role="button" data-role="name" data-value="材质/版型">
+                  <span class="val">材质/版型</span>
+                  <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5 9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="field-select value" role="button" data-role="value" data-value="毛绒-抱枕">
+                  <span class="val">毛绒-抱枕</span>
+                  <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5 9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <button type="button" class="attr-del" aria-label="删除属性">×</button>
+              </div>
+              <div class="attr-row">
+                <div class="field-select name" role="button" data-role="name" data-value="版型">
+                  <span class="val">版型</span>
+                  <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5 9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="field-select value" role="button" data-role="value" data-value="45×45">
+                  <span class="val">45×45</span>
+                  <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5 9 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <button type="button" class="attr-del" aria-label="删除属性">×</button>
+              </div>
+            </div>
+            <button type="button" id="attr-add" class="mt-2 text-[13px]" style="color:var(--td-brand)">+ 添加属性</button>
+          </div>
+        </div>
+
         <div class="px mt-3 mb-1 text-[13px] font-semibold">操作记录</div>
         <div class="card" style="margin:0 16px 16px">
           <div class="cell"><span style="color:var(--td-text-2)">付款时间</span><span class="cell-note" style="color:var(--td-text-1)">08-16 14:40</span></div>
@@ -42,11 +105,26 @@
       </div>
       <div class="flex gap-3" style="padding:8px 16px 28px;background:#fff;border-top:0.5px solid var(--td-gray-3)">
         <button class="btn btn-outline flex-1">联系客服</button>
-        <button class="btn btn-primary flex-1">查看打回原因</button>
+        <button class="btn btn-primary flex-1">保存并重新推单</button>
+      </div>
+
+      <div class="mask" id="attr-picker" style="display:none">
+        <div class="dialog">
+          <div class="flex items-center justify-between mb-3">
+            <div class="text-[16px] font-semibold" data-picker-title>选择</div>
+            <button type="button" class="text-[14px]" style="color:var(--td-text-2)" data-picker-close>取消</button>
+          </div>
+          <div class="search-bar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <input data-picker-search class="flex-1 bg-transparent outline-none text-[14px]" type="search" placeholder="搜索">
+          </div>
+          <div class="picker-list" data-picker-list></div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <script src="assets/chrome.js"></script>
+<script src="assets/order-edit.js"></script>
 </body>
 </html>

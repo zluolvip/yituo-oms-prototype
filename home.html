@@ -13,16 +13,6 @@
   <div class="phone-screen" data-tab="home">
     <div class="app">
       <div class="scroll">
-        <div class="px pt-2 pb-3 flex items-center justify-between" style="background:#fff;padding-right:108px">
-          <div class="flex items-center gap-2">
-            <img src="assets/img/yituo-logo.png" width="28" height="28" alt="" style="border-radius:7px">
-            <div>
-              <div class="text-[16px] font-semibold leading-5">张卖家</div>
-              <div class="text-[11px]" style="color:var(--td-text-3)">2026-08-21 周五</div>
-            </div>
-          </div>
-        </div>
-
         <div class="px py">
           <div class="card px-4 py-4" style="background:linear-gradient(135deg,#003cab 0%,#0052d9 55%,#366ef4 100%);color:#fff">
             <div class="flex items-start justify-between">
@@ -40,6 +30,13 @@
         </div>
 
         <div class="px grid grid-cols-2 gap-2">
+          <div class="card px-3 py-3">
+            <div class="text-[12px]" style="color:var(--td-text-3)">今天推单</div>
+            <div class="mt-1 flex items-end justify-between">
+              <span class="text-[24px] font-semibold price leading-none">12</span>
+              <span class="td-tag td-tag-success">今日</span>
+            </div>
+          </div>
           <div class="card px-3 py-3">
             <div class="text-[12px]" style="color:var(--td-text-3)">待推单</div>
             <div class="mt-1 flex items-end justify-between">
@@ -59,13 +56,6 @@
             <div class="mt-1 flex items-end justify-between">
               <span class="text-[24px] font-semibold price leading-none">1</span>
               <span class="td-tag td-tag-brand">进行中</span>
-            </div>
-          </div>
-          <div class="card px-3 py-3">
-            <div class="text-[12px]" style="color:var(--td-text-3)">未读消息</div>
-            <div class="mt-1 flex items-end justify-between">
-              <span class="text-[24px] font-semibold price leading-none">3</span>
-              <span class="td-tag td-tag-error">新</span>
             </div>
           </div>
         </div>
@@ -91,11 +81,54 @@
               <span class="text-[11px]">充值记录</span>
             </div>
             <div class="flex flex-col items-center gap-1.5">
-              <div class="w-10 h-10 rounded-td-lg flex items-center justify-center" style="background:#f5f3ff;color:#7c3aed">
+              <div class="relative w-10 h-10 rounded-td-lg flex items-center justify-center" style="background:#f5f3ff;color:#7c3aed">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 18.5l1.6-3.2A7.5 7.5 0 1112 19.5H7.2L5 18.5z" stroke="currentColor" stroke-width="1.7"/></svg>
+                <span class="tab-dot" style="top:-2px;right:-2px">3</span>
               </div>
               <span class="text-[11px]">消息中心</span>
             </div>
+          </div>
+        </div>
+
+        <div class="px mt-3">
+          <div class="card px-4 py-3">
+            <div class="flex items-center justify-between">
+              <div class="text-[13px] font-semibold">近 7 天趋势</div>
+              <div class="text-[11px]" style="color:var(--td-text-3)">推单量 · 单/日</div>
+            </div>
+            <svg viewBox="0 0 313 148" width="100%" height="148" preserveAspectRatio="xMidYMid meet" overflow="visible" aria-label="近 7 天推单量折线图" style="display:block;margin-top:8px">
+              <defs>
+                <linearGradient id="pushTrendFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#0052D9" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#0052D9" stop-opacity="0.02"/>
+                </linearGradient>
+              </defs>
+              <!-- 水平参考线 -->
+              <line x1="8" y1="22" x2="305" y2="22" stroke="#eee" stroke-width="1"/>
+              <line x1="8" y1="70" x2="305" y2="70" stroke="#eee" stroke-width="1"/>
+              <line x1="8" y1="118" x2="305" y2="118" stroke="#e8e8e8" stroke-width="1"/>
+              <text x="8" y="18" font-size="10" fill="rgba(0,0,0,0.26)" font-family="PingFang SC, sans-serif">16</text>
+              <text x="8" y="66" font-size="10" fill="rgba(0,0,0,0.26)" font-family="PingFang SC, sans-serif">8</text>
+              <text x="8" y="114" font-size="10" fill="rgba(0,0,0,0.26)" font-family="PingFang SC, sans-serif">0</text>
+              <!-- 面积 + 折线：8 / 11 / 7 / 15 / 6 / 4 / 12（y=118 为 0，y=22 为 16） -->
+              <path d="M28,70 L70.83,52 L113.67,76 L156.5,28 L199.33,82 L242.17,94 L285,46 V118 H28 Z" fill="url(#pushTrendFill)"/>
+              <path d="M28,70 L70.83,52 L113.67,76 L156.5,28 L199.33,82 L242.17,94 L285,46" fill="none" stroke="#0052D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="28" cy="70" r="3" fill="#fff" stroke="#0052D9" stroke-width="1.6"/>
+              <circle cx="70.83" cy="52" r="3" fill="#fff" stroke="#0052D9" stroke-width="1.6"/>
+              <circle cx="113.67" cy="76" r="3" fill="#fff" stroke="#0052D9" stroke-width="1.6"/>
+              <circle cx="156.5" cy="28" r="3" fill="#fff" stroke="#0052D9" stroke-width="1.6"/>
+              <circle cx="199.33" cy="82" r="3" fill="#fff" stroke="#0052D9" stroke-width="1.6"/>
+              <circle cx="242.17" cy="94" r="3" fill="#fff" stroke="#0052D9" stroke-width="1.6"/>
+              <circle cx="285" cy="46" r="4" fill="#0052D9"/>
+              <text x="285" y="36" text-anchor="middle" font-size="10" font-weight="600" fill="#0052D9" font-family="PingFang SC, sans-serif">12</text>
+              <text x="28" y="138" text-anchor="middle" font-size="10" fill="rgba(0,0,0,0.4)" font-family="PingFang SC, sans-serif">08-18</text>
+              <text x="70.83" y="138" text-anchor="middle" font-size="10" fill="rgba(0,0,0,0.4)" font-family="PingFang SC, sans-serif">08-19</text>
+              <text x="113.67" y="138" text-anchor="middle" font-size="10" fill="rgba(0,0,0,0.4)" font-family="PingFang SC, sans-serif">08-20</text>
+              <text x="156.5" y="138" text-anchor="middle" font-size="10" fill="rgba(0,0,0,0.4)" font-family="PingFang SC, sans-serif">08-21</text>
+              <text x="199.33" y="138" text-anchor="middle" font-size="10" fill="rgba(0,0,0,0.4)" font-family="PingFang SC, sans-serif">08-22</text>
+              <text x="242.17" y="138" text-anchor="middle" font-size="10" fill="rgba(0,0,0,0.4)" font-family="PingFang SC, sans-serif">08-23</text>
+              <text x="285" y="138" text-anchor="middle" font-size="10" font-weight="600" fill="#0052D9" font-family="PingFang SC, sans-serif">08-24</text>
+            </svg>
           </div>
         </div>
 

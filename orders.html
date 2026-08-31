@@ -20,13 +20,14 @@
           </div>
         </div>
         <div class="tabs">
-          <div class="tab active" data-filter="all">全部</div>
-          <div class="tab" data-filter="待推单">待推单</div>
-          <div class="tab" data-filter="工厂打回">工厂打回</div>
-          <div class="tab" data-filter="待接单">待接单</div>
-          <div class="tab" data-filter="生产中">生产中</div>
-          <div class="tab" data-filter="已打标">已打标</div>
-          <div class="tab" data-filter="已发货">已发货</div>
+          <div class="tab" data-filter="all">全部</div>
+          <div class="tab" data-filter="待处理">待处理<span class="count">(3)</span></div>
+          <div class="tab active" data-filter="待推单">待推单<span class="count">(2)</span></div>
+          <div class="tab" data-filter="工厂打回">工厂打回<span class="count">(1)</span></div>
+          <div class="tab" data-filter="待接单">待接单<span class="count">(1)</span></div>
+          <div class="tab" data-filter="生产中">生产中<span class="count">(1)</span></div>
+          <div class="tab" data-filter="已打标">已打标<span class="count">(1)</span></div>
+          <div class="tab" data-filter="已发货">已发货<span class="count">(1)</span></div>
         </div>
 
         <div class="px py space-y-2" id="order-list">
@@ -43,6 +44,9 @@
                   <div class="flex-1 min-w-0">
                     <div class="text-[14px] truncate">定制T恤 · 黑色 L</div>
                     <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">亚马逊 · SKU TS-BLK-L · ×2</div>
+                    <div class="text-[11px] mt-1 price" style="color:var(--td-text-2)">图号 1920654414421</div>
+                    <div class="text-[11px] mt-0.5" style="color:var(--td-text-3)">发货仓库 义乌仓</div>
+                    <div class="text-[11px] mt-0.5 leading-4" style="color:var(--td-text-3)">颜色属性：黑色；材质/版型：毛绒-帽子；版型：女T恤；</div>
                     <div class="flex items-center justify-between mt-1">
                       <span class="text-[11px]" style="color:var(--td-text-3)">08-18 09:32</span>
                       <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥128.00</span>
@@ -66,6 +70,9 @@
                   <div class="flex-1 min-w-0">
                     <div class="text-[14px] truncate">马克杯定制 · 白杯 11oz</div>
                     <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">Temu · SKU MG-WHT-11 · ×1</div>
+                    <div class="text-[11px] mt-1 price" style="color:var(--td-text-2)">图号 1920654414502</div>
+                    <div class="text-[11px] mt-0.5" style="color:var(--td-text-3)">发货仓库 金华仓</div>
+                    <div class="text-[11px] mt-0.5 leading-4" style="color:var(--td-text-3)">颜色属性：白色；材质/版型：陶瓷-11oz；版型：马克杯；</div>
                     <div class="flex items-center justify-between mt-1">
                       <span class="text-[11px]" style="color:var(--td-text-3)">08-18 09:48</span>
                       <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥86.50</span>
@@ -76,7 +83,7 @@
             </div>
           </div>
 
-          <div class="card p-3 order-item" data-status="工厂打回">
+          <div class="card p-3 order-item" data-status="工厂打回" style="display:none">
             <div class="flex gap-2">
               <div class="check mt-1"></div>
               <div class="flex-1 min-w-0">
@@ -89,6 +96,9 @@
                   <div class="flex-1 min-w-0">
                     <div class="text-[14px] truncate">抱枕定制 · 45×45</div>
                     <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">Temu · 工厂打回：内芯缺货</div>
+                    <div class="text-[11px] mt-1 price" style="color:var(--td-text-2)">图号 1920654414618</div>
+                    <div class="text-[11px] mt-0.5" style="color:var(--td-text-3)">发货仓库 深圳仓</div>
+                    <div class="text-[11px] mt-0.5 leading-4" style="color:var(--td-text-3)">颜色属性：米色；材质/版型：毛绒-抱枕；版型：45×45；</div>
                     <div class="flex items-center justify-between mt-1">
                       <span class="text-[11px]" style="color:var(--td-text-3)">08-16 14:22</span>
                       <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥188.00</span>
@@ -99,7 +109,7 @@
             </div>
           </div>
 
-          <div class="card p-3 order-item" data-status="待接单">
+          <div class="card p-3 order-item" data-status="待接单" style="display:none">
             <div class="flex gap-2">
               <div class="check mt-1"></div>
               <div class="flex-1 min-w-0">
@@ -112,6 +122,9 @@
                   <div class="flex-1 min-w-0">
                     <div class="text-[14px] truncate">手机壳 · iPhone 15 Pro</div>
                     <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">TikTok · SKU CS-15P-CLR · ×3</div>
+                    <div class="text-[11px] mt-1 price" style="color:var(--td-text-2)">图号 1920654414783</div>
+                    <div class="text-[11px] mt-0.5" style="color:var(--td-text-3)">发货仓库 东莞仓</div>
+                    <div class="text-[11px] mt-0.5 leading-4" style="color:var(--td-text-3)">颜色属性：透明；材质/版型：TPU-轻薄；版型：iPhone 15 Pro；</div>
                     <div class="flex items-center justify-between mt-1">
                       <span class="text-[11px]" style="color:var(--td-text-3)">08-18 10:05</span>
                       <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥215.00</span>
@@ -122,7 +135,7 @@
             </div>
           </div>
 
-          <div class="card p-3 order-item" data-status="生产中">
+          <div class="card p-3 order-item" data-status="生产中" style="display:none">
             <div class="flex gap-2">
               <div class="check mt-1"></div>
               <div class="flex-1 min-w-0">
@@ -135,6 +148,9 @@
                   <div class="flex-1 min-w-0">
                     <div class="text-[14px] truncate">帆布袋定制 · 本色</div>
                     <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">亚马逊 · SKU TB-NAT-01 · ×1</div>
+                    <div class="text-[11px] mt-1 price" style="color:var(--td-text-2)">图号 1920654414890</div>
+                    <div class="text-[11px] mt-0.5" style="color:var(--td-text-3)">发货仓库 广州仓</div>
+                    <div class="text-[11px] mt-0.5 leading-4" style="color:var(--td-text-3)">颜色属性：本色；材质/版型：帆布-购物袋；版型：中号；</div>
                     <div class="flex items-center justify-between mt-1">
                       <span class="text-[11px]" style="color:var(--td-text-3)">08-17 18:02</span>
                       <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥96.00</span>
@@ -145,7 +161,7 @@
             </div>
           </div>
 
-          <div class="card p-3 order-item" data-status="已打标">
+          <div class="card p-3 order-item" data-status="已打标" style="display:none">
             <div class="flex gap-2">
               <div class="check mt-1"></div>
               <div class="flex-1 min-w-0">
@@ -158,6 +174,9 @@
                   <div class="flex-1 min-w-0">
                     <div class="text-[14px] truncate">卫衣定制 · 灰色 XL</div>
                     <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">Temu · SKU HD-GRY-XL · ×1</div>
+                    <div class="text-[11px] mt-1 price" style="color:var(--td-text-2)">图号 1920654414921</div>
+                    <div class="text-[11px] mt-0.5" style="color:var(--td-text-3)">发货仓库 义乌仓</div>
+                    <div class="text-[11px] mt-0.5 leading-4" style="color:var(--td-text-3)">颜色属性：灰色；材质/版型：抓绒-卫衣；版型：女卫衣 XL；</div>
                     <div class="flex items-center justify-between mt-1">
                       <span class="text-[11px]" style="color:var(--td-text-3)">08-15 16:40</span>
                       <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥156.00</span>
@@ -168,7 +187,7 @@
             </div>
           </div>
 
-          <div class="card p-3 order-item" data-status="已发货">
+          <div class="card p-3 order-item" data-status="已发货" style="display:none">
             <div class="flex gap-2">
               <div class="check mt-1"></div>
               <div class="flex-1 min-w-0">
@@ -181,6 +200,9 @@
                   <div class="flex-1 min-w-0">
                     <div class="text-[14px] truncate">马克杯 · 黑色 15oz</div>
                     <div class="text-[12px] mt-0.5" style="color:var(--td-text-3)">亚马逊 · 物流 YT60814009</div>
+                    <div class="text-[11px] mt-1 price" style="color:var(--td-text-2)">图号 1920654414033</div>
+                    <div class="text-[11px] mt-0.5" style="color:var(--td-text-3)">发货仓库 美西仓</div>
+                    <div class="text-[11px] mt-0.5 leading-4" style="color:var(--td-text-3)">颜色属性：黑色；材质/版型：陶瓷-15oz；版型：马克杯；</div>
                     <div class="flex items-center justify-between mt-1">
                       <span class="text-[11px]" style="color:var(--td-text-3)">08-14 11:08</span>
                       <span class="price text-[15px] font-semibold" style="color:var(--td-error)">¥72.00</span>
@@ -205,16 +227,24 @@
 </div>
 <script src="assets/chrome.js"></script>
 <script>
+  function matchFilter(status, filter) {
+    if (filter === "all") return true;
+    if (filter === "待处理") return status === "待推单" || status === "工厂打回";
+    return status === filter;
+  }
+  function applyFilter(filter) {
+    document.querySelectorAll(".order-item").forEach(function (card) {
+      card.style.display = matchFilter(card.getAttribute("data-status"), filter) ? "" : "none";
+    });
+  }
   document.querySelectorAll(".tabs .tab").forEach(function (el) {
     el.addEventListener("click", function () {
       document.querySelectorAll(".tabs .tab").forEach(function (t) { t.classList.remove("active"); });
       el.classList.add("active");
-      var filter = el.getAttribute("data-filter");
-      document.querySelectorAll(".order-item").forEach(function (card) {
-        card.style.display = (filter === "all" || card.getAttribute("data-status") === filter) ? "" : "none";
-      });
+      applyFilter(el.getAttribute("data-filter"));
     });
   });
+  applyFilter("待推单");
   document.querySelectorAll(".check").forEach(function (el) {
     el.addEventListener("click", function () {
       el.classList.toggle("on");
